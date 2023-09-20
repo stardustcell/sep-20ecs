@@ -1,0 +1,19 @@
+{
+	"family": "demo-tf",
+	"taskRoleArn": "arn:aws:iam::695747170963:role/ecsTaskExecutionRole",
+	"containerDefinitions": [{
+		"name": "demo-container",
+		"image": "695747170963.dkr.ecr.us-east-2.amazonaws.com/demo-repo3:GIT_COMMIT",
+		"cpu": 400,
+		"memory": 300,
+		"memoryReservation": 200,
+		"volumesFrom": [],
+		"portMappings": [{
+			"hostPort": 0,
+			"containerPort": 80,
+			"protocol": "tcp"
+		}],
+		"essential": true,
+		"mountPoints": []
+	}]
+}
