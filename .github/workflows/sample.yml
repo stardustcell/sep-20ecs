@@ -80,10 +80,10 @@ jobs:
 
 
              if [ "${{ github.ref }}" == "refs/heads/master" ]; then
-             SERVICE_NAME="demo-svc"
+             SERVICE_NAME="sep-20svc"
              IMAGE_VERSION="${{ env.BRANCH_NAME }}-${{ github.run_number }}"
              TASK_FAMILY="sep-20tdf"
-             CLUSTER="demo-ecs"
+             CLUSTER="sep-20ecs"
              TASK_ROLE="ecsTaskExecutionRole"
              JSON_FILE=".github/workflows/task-definition"
              RUNNING_COUNT=1
