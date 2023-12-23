@@ -84,7 +84,7 @@ jobs:
              IMAGE_VERSION="${{ env.BRANCH_NAME }}-${{ github.run_number }}"
              TASK_FAMILY="DSO-2312TDF"
              CLUSTER="dso-2312"
-             TASK_ROLE="ecsTaskExecutionRole"
+             TASK_ROLE="ecsrole"
              JSON_FILE=".github/workflows/task-definition"
              RUNNING_COUNT=1
              startECSDeploy
