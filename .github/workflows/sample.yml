@@ -80,7 +80,7 @@ jobs:
 
 
              if [ "${{ github.ref }}" == "refs/heads/master" ]; then
-             SERVICE_NAME="dso23-svc01"
+             SERVICE_NAME="dso231223"
              IMAGE_VERSION="${{ env.BRANCH_NAME }}-${{ github.run_number }}"
              TASK_FAMILY="DSO-2312TDF"
              CLUSTER="dso-2312"
