@@ -33,7 +33,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t gitactions-ecs:${{ env.BRANCH_NAME }}-${{ github.run_number }} .
-          docker tag gitactions-ecs:${{ env.BRANCH_NAME }}-${{ github.run_number }} 695747170963.dkr.ecr.us-east-2.amazonaws.com/sep-20ecr:${{ env.BRANCH_NAME }}-${{ github.run_number }}
+          docker tag gitactions-ecs:${{ env.BRANCH_NAME }}-${{ github.run_number }} 691585683289.dkr.ecr.us-east-2.amazonaws.com/dso2312-repo:${{ env.BRANCH_NAME }}-${{ github.run_number }}
     
 
       - name: Login to Amazon ECR
@@ -42,7 +42,7 @@ jobs:
 
       - name: Push Docker image to Amazon ECR
         run: |
-          docker push 695747170963.dkr.ecr.us-east-2.amazonaws.com/sep-20ecr:${{ env.BRANCH_NAME }}-${{ github.run_number }}
+          docker push 691585683289.dkr.ecr.us-east-2.amazonaws.com/dso2312-repo:${{ env.BRANCH_NAME }}-${{ github.run_number }}
       - name: Deploy to ECS
         run: |
              
@@ -80,10 +80,10 @@ jobs:
 
 
              if [ "${{ github.ref }}" == "refs/heads/master" ]; then
-             SERVICE_NAME="sep-20svc"
+             SERVICE_NAME="dso23-svc"
              IMAGE_VERSION="${{ env.BRANCH_NAME }}-${{ github.run_number }}"
-             TASK_FAMILY="sep-20tdf"
-             CLUSTER="sep-20ecs"
+             TASK_FAMILY="DSO-2312TDF"
+             CLUSTER="dso-2312"
              TASK_ROLE="ecsTaskExecutionRole"
              JSON_FILE=".github/workflows/task-definition"
              RUNNING_COUNT=1
