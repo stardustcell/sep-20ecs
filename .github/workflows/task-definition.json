@@ -1,9 +1,9 @@
 {
 	"family": "DSO-2312TDF",
-	"taskRoleArn": "arn:aws:iam::691585683289:role/ecsrole",
+	"taskRoleArn": "arn:aws:iam::493854845415:role/ecsrole",
 	"containerDefinitions": [{
 		"name": "apache-container",
-		"image": "691585683289.dkr.ecr.us-east-2.amazonaws.com/dso2312-repo:GIT_COMMIT",
+		"image": "493854845415.dkr.ecr.us-east-1.amazonaws.com/project2024:GIT_COMMIT",
 		"cpu": 400,
 		"memory": 300,
 		"memoryReservation": 200,
