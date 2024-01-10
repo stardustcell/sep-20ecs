@@ -1,6 +1,6 @@
 {
 	"family": "DSO-2312TDF",
-	"taskRoleArn": "arn:aws:iam::623026277054:role/ecsTaskExecutionRole",
+	"taskRoleArn": "arn:aws:iam::623026277054:role/ecsrole",
 	"containerDefinitions": [{
 		"name": "apache-container",
 		"image": "623026277054.dkr.ecr.us-east-1.amazonaws.com/project-repo:GIT_COMMIT",
